@@ -1,5 +1,7 @@
-<?phP
+﻿<?php
 
-echo "Wlecome to my place =]";
+$con mysql_connect('localhost','a_site','');
+$db = mysql_select_db('sals');
+
 
 ?>

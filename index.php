@@ -6,7 +6,7 @@ $db = mysql_select_db('sals');
 
 //get list of users into array
 
-$sql=mysql_query("SELECT * FROM users");
+$sql=mysql_query("SELECT * FROM users") or die (mysql_error());
 $usernames=mysql_fetch_assoc($sql);
 $sql=NULL;
 echo"<html><head>";

@@ -1,7 +1,7 @@
 ﻿<?php
 //will eventually be put into functions.php
 
-$con mysql_connect('localhost','a_site','');
+$con = mysql_connect('localhost','a_site','');
 $db = mysql_select_db('sals');
 
 //get list of users into array

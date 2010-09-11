@@ -9,7 +9,7 @@ $db = mysql_select_db('sals');
 $sql=mysql_query("SELECT * FROM users");
 $usernames=mysql_fetch_assoc($sql);
 $sql=NULL;
-echo"<html><head>";
+
 //get title for head
 if(!$_GET['p'] || $_GET['p']=1){
 	$sql=mysql_query("SELECT title FROM content WHERE id ='1'");
@@ -20,7 +20,8 @@ if(!$_GET['p'] || $_GET['p']=1){
 	$title=mysql_fetch_assoc($sql);
 	$sql=NULL;
 }
-echo"<title>".$title." | site</title></head><body>";
 print_r($title);
+echo"<html><head>";
+echo"<title>".$title." | site</title></head><body>";
 echo"</body>";
 ?>

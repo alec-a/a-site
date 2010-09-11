@@ -20,5 +20,7 @@ if(!$_GET['p'] || $_GET['p']=1){
 	$title=mysql_fetch_assoc($sql);
 	$sql=NULL;
 }
-echo"<title>".$title." | site</title>";
+echo"<title>".$title." | site</title></head><body>";
+print_r($title);
+echo"</body>";
 ?>

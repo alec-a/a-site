@@ -22,5 +22,6 @@ if(!$_GET['p'] || $_GET['p']=1){
 }
 echo"<html><head>";
 echo"<title>".$content['title']." | site</title></head><body>";
+echo $content['content']."<br/>".$content['creation_date']."<br/>".$content['creater_id'];
 echo"</body>";
 ?>

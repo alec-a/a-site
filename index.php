@@ -10,18 +10,17 @@ $sql=mysql_query("SELECT * FROM users");
 $usernames=mysql_fetch_assoc($sql);
 $sql=NULL;
 
-//get title for head
+//get content
 if(!$_GET['p'] || $_GET['p']=1){
-	$sql=mysql_query("SELECT title FROM content WHERE id ='1'");
-	$title=mysql_fetch_assoc($sql);
+	$sql=mysql_query("SELECT * FROM content WHERE id ='1'");
+	$content=mysql_fetch_assoc($sql);
 	$sql=NULL;
 }else{
-	$sql=mysql_query("SELECT title FROM content WHERE id='".$_GET['p']."'");
-	$title=mysql_fetch_assoc($sql);
+	$sql=mysql_query("SELECT * FROM content WHERE id='".$_GET['p']."'");
+	$content=mysql_fetch_assoc($sql);
 	$sql=NULL;
 }
-print_r($title);
 echo"<html><head>";
-echo"<title>".$title." | site</title></head><body>";
+echo"<title>".$content['title']." | site</title></head><body>";
 echo"</body>";
 ?>
